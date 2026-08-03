@@ -1,5 +1,5 @@
 :root {
-  --body-bg-color: #d3dedc;
+  --body-bg-color: #6d8b74;
   --content-bg-color: #ede9e6;
   --card-bg-color: #f5f5f5;
   --text-color: #555;
@@ -1145,7 +1145,7 @@ pre code {
   margin: 0;
 }
 .site-subtitle {
-  color: #7c99ac;
+  color: #d8d5ba;
   font-size: 0.8125em;
   margin: 10px 10px 0;
 }
@@ -1280,7 +1280,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #42ffe7;
+    background: #a8ff59;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
