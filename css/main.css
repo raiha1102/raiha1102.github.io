@@ -1,5 +1,5 @@
 :root {
-  --body-bg-color: #9bcec1;
+  --body-bg-color: #86b0bd;
   --content-bg-color: #ede9e6;
   --card-bg-color: #f5f5f5;
   --text-color: #555;
@@ -1280,7 +1280,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #fff;
+    background: #1bffb8;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -1346,7 +1346,7 @@ pre code {
   }
 }
 .sidebar-toggle:hover .toggle-line {
-  background: $steelblue;
+  background: #e2a16f;
 }
 @media (any-hover: hover) {
   body:not(.sidebar-active) .sidebar-toggle:hover :first-child {
@@ -1401,17 +1401,17 @@ pre code {
   margin-left: 10px;
 }
 .sidebar-nav li:hover {
-  color: $steelblue;
+  color: #e2a16f;
 }
 .sidebar-toc-active .sidebar-nav-toc,
 .sidebar-overview-active .sidebar-nav-overview {
-  border-bottom-color: $steelblue;
-  color: $steelblue;
+  border-bottom-color: #e2a16f;
+  color: #e2a16f;
   transition-delay: 0.2s;
 }
 .sidebar-toc-active .sidebar-nav-toc:hover,
 .sidebar-overview-active .sidebar-nav-overview:hover {
-  color: $steelblue;
+  color: #e2a16f;
 }
 .sidebar-panel-container {
   align-items: start;
@@ -1502,14 +1502,14 @@ pre code {
   text-overflow: ellipsis;
 }
 .post-toc .nav .active > a {
-  border-bottom-color: $steelblue;
-  color: $steelblue;
+  border-bottom-color: #e2a16f;
+  color: #e2a16f;
 }
 .post-toc .nav .active-current > a {
-  color: $steelblue;
+  color: #e2a16f;
 }
 .post-toc .nav .active-current > a:hover {
-  color: $steelblue;
+  color: #e2a16f;
 }
 .site-author-image {
   border: 1px solid #eee;
@@ -2183,17 +2183,17 @@ pre code {
 }
 .reward-container button {
   background: transparent;
-  color: $steelblue;
+  color: #e2a16f;
   cursor: pointer;
   line-height: 2;
   padding: 0 15px;
-  border: 2px solid $steelblue;
+  border: 2px solid #e2a16f;
   border-radius: 2px;
   outline: 0;
   vertical-align: text-top;
 }
 .reward-container button:hover {
-  background: $steelblue;
+  background: #e2a16f;
   color: #fff;
 }
 .post-reward {
@@ -2678,14 +2678,14 @@ header.header {
 }
 .sub-menu .menu-item a:hover {
   background: transparent;
-  color: $steelblue;
+  color: #e2a16f;
 }
 .sub-menu .menu-item-active {
-  border-bottom-color: $steelblue;
-  color: $steelblue;
+  border-bottom-color: #e2a16f;
+  color: #e2a16f;
 }
 .sub-menu .menu-item-active:hover {
-  border-bottom-color: $steelblue;
+  border-bottom-color: #e2a16f;
 }
 @media (min-width: 992px) {
   .sidebar {
