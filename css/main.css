@@ -1,5 +1,5 @@
 :root {
-  --body-bg-color: #f5f7f9;
+  --body-bg-color: #446586;
   --content-bg-color: #fff;
   --card-bg-color: #f5f5f5;
   --text-color: #555;
@@ -1280,7 +1280,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #93a708;
+    background: #ff5e20;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -1346,7 +1346,7 @@ pre code {
   }
 }
 .sidebar-toggle:hover .toggle-line {
-  background: #fc6423;
+  background: $steelblue;
 }
 @media (any-hover: hover) {
   body:not(.sidebar-active) .sidebar-toggle:hover :first-child {
@@ -1401,17 +1401,17 @@ pre code {
   margin-left: 10px;
 }
 .sidebar-nav li:hover {
-  color: #fc6423;
+  color: $steelblue;
 }
 .sidebar-toc-active .sidebar-nav-toc,
 .sidebar-overview-active .sidebar-nav-overview {
-  border-bottom-color: #fc6423;
-  color: #fc6423;
+  border-bottom-color: $steelblue;
+  color: $steelblue;
   transition-delay: 0.2s;
 }
 .sidebar-toc-active .sidebar-nav-toc:hover,
 .sidebar-overview-active .sidebar-nav-overview:hover {
-  color: #fc6423;
+  color: $steelblue;
 }
 .sidebar-panel-container {
   align-items: start;
@@ -1502,14 +1502,14 @@ pre code {
   text-overflow: ellipsis;
 }
 .post-toc .nav .active > a {
-  border-bottom-color: #fc6423;
-  color: #fc6423;
+  border-bottom-color: $steelblue;
+  color: $steelblue;
 }
 .post-toc .nav .active-current > a {
-  color: #fc6423;
+  color: $steelblue;
 }
 .post-toc .nav .active-current > a:hover {
-  color: #fc6423;
+  color: $steelblue;
 }
 .site-author-image {
   border: 1px solid #eee;
@@ -2183,17 +2183,17 @@ pre code {
 }
 .reward-container button {
   background: transparent;
-  color: #fc6423;
+  color: $steelblue;
   cursor: pointer;
   line-height: 2;
   padding: 0 15px;
-  border: 2px solid #fc6423;
+  border: 2px solid $steelblue;
   border-radius: 2px;
   outline: 0;
   vertical-align: text-top;
 }
 .reward-container button:hover {
-  background: #fc6423;
+  background: $steelblue;
   color: #fff;
 }
 .post-reward {
@@ -2678,14 +2678,14 @@ header.header {
 }
 .sub-menu .menu-item a:hover {
   background: transparent;
-  color: #fc6423;
+  color: $steelblue;
 }
 .sub-menu .menu-item-active {
-  border-bottom-color: #fc6423;
-  color: #fc6423;
+  border-bottom-color: $steelblue;
+  color: $steelblue;
 }
 .sub-menu .menu-item-active:hover {
-  border-bottom-color: #fc6423;
+  border-bottom-color: $steelblue;
 }
 @media (min-width: 992px) {
   .sidebar {
