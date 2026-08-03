@@ -1,5 +1,5 @@
 :root {
-  --body-bg-color: #5c766d;
+  --body-bg-color: #d3dedc;
   --content-bg-color: #ede9e6;
   --card-bg-color: #f5f5f5;
   --text-color: #555;
@@ -13,7 +13,7 @@
   --table-row-odd-bg-color: #f9f9f9;
   --table-row-hover-bg-color: #f5f5f5;
   --menu-item-bg-color: #f5f5f5;
-  --theme-color: #bbdbf3;
+  --theme-color: #92a9bd;
   --btn-default-bg: #fff;
   --btn-default-color: #555;
   --btn-default-border-color: #555;
@@ -1145,7 +1145,7 @@ pre code {
   margin: 0;
 }
 .site-subtitle {
-  color: #ddd;
+  color: #7c99ac;
   font-size: 0.8125em;
   margin: 10px 10px 0;
 }
@@ -1280,7 +1280,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #ac41d9;
+    background: #42ffe7;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
