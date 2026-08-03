@@ -1,5 +1,5 @@
 :root {
-  --body-bg-color: #5a7863;
+  --body-bg-color: #9bcec1;
   --content-bg-color: #ede9e6;
   --card-bg-color: #f5f5f5;
   --text-color: #555;
@@ -1280,7 +1280,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #ff757f;
+    background: #fff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
