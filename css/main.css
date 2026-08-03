@@ -1,5 +1,5 @@
 :root {
-  --body-bg-color: #5c766d;
+  --body-bg-color: #5a7863;
   --content-bg-color: #ede9e6;
   --card-bg-color: #f5f5f5;
   --text-color: #555;
@@ -13,7 +13,7 @@
   --table-row-odd-bg-color: #f9f9f9;
   --table-row-hover-bg-color: #f5f5f5;
   --menu-item-bg-color: #f5f5f5;
-  --theme-color: #92a9bd;
+  --theme-color: #3b4953;
   --btn-default-bg: #fff;
   --btn-default-color: #555;
   --btn-default-border-color: #555;
@@ -1280,7 +1280,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #b0c262;
+    background: #ff757f;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
