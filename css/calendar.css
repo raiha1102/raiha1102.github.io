@@ -1,0 +1,45 @@
+/* Container for the entire year */
+.calendar-year {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  /* Default: 1 column for mobile viewports */
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+/* Tablet view: 2 columns */
+@media (min-width: 600px) {
+  .calendar-year {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Small desktop view: 3 columns (3x4 layout) */
+@media (min-width: 900px) {
+  .calendar-year {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Large desktop view: 4 columns (4x3 layout) */
+@media (min-width: 1200px) {
+  .calendar-year {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Individual month container */
+.month {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  background: #fff;
+}
+
+/* 7-column grid for the days within a month */
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 5px;
+  text-align: center;
+}

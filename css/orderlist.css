@@ -31,7 +31,7 @@ h3 {
     width: 100%;
     border: 3px solid var(--main-bg-color);
     border-radius: 5px;
-    box-shadow: 1px 1px 5px var(--main-bg-color);
+    box-shadow: 1px 1px 1px var(--main-bg-color);
     background: transparent;
     margin-inline: auto;
 }
