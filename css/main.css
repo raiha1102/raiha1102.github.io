@@ -1,12 +1,12 @@
 :root {
-  --body-bg-color: #abcdce;
-  --content-bg-color: #f3eae2;
+  --body-bg-color: #eee;
+  --content-bg-color: #ede9e6;
   --card-bg-color: #f5f5f5;
-  --text-color: #464955;
+  --text-color: #555;
   --selection-bg: #262a30;
   --selection-color: #eee;
-  --blockquote-color: #464955;
-  --link-color: #424a68;
+  --blockquote-color: #666;
+  --link-color: #555;
   --link-hover-color: #222;
   --brand-color: #fff;
   --brand-hover-color: #fff;
@@ -15,8 +15,8 @@
   --menu-item-bg-color: #f5f5f5;
   --theme-color: #729bab;
   --btn-default-bg: #fff;
-  --btn-default-color: #464955;
-  --btn-default-border-color: #464955;
+  --btn-default-color: #555;
+  --btn-default-border-color: #555;
   --btn-default-hover-bg: #222;
   --btn-default-hover-color: #fff;
   --btn-default-hover-border-color: #222;
@@ -223,7 +223,7 @@ h6 {
   font-size: 0.875em;
 }
 a {
-  border-bottom: 1px solid #fc6423;
+  border-bottom: 1px solid #999;
   color: var(--link-color);
   cursor: pointer;
   outline: 0;
@@ -638,7 +638,7 @@ pre code {
   width: 100%;
 }
 .post-body .label {
-  color: #464955;
+  color: #555;
   padding: 0 2px;
 }
 .post-body .label.default {
@@ -1280,7 +1280,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #fcff38;
+    background: #6bffff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2819,10 +2819,10 @@ header.header {
 }
 .post-body h1,
 .post-body h2 {
-  border-bottom: 1px solid #abcdce;
+  border-bottom: 1px solid #eee;
 }
 .post-body h3 {
-  border-bottom: 1px dotted #abcdce;
+  border-bottom: 1px dotted #eee;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .main-inner {
