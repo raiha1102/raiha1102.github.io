@@ -87,7 +87,7 @@ h3 {
 }
 
 .post-body .fancybox+figcaption, .post-body .image-caption, .post-body img+figcaption {
-    margin: -15px auto 15px;
+    margin: -15px auto 12px;
     color: #686b68;
 }
 
@@ -208,6 +208,6 @@ h3 {
 /* medias */
 @media only screen and (max-width:650px) {
     .post-body .fancybox+figcaption, .post-body .image-caption, .post-body img+figcaption {
-    margin: 0px auto 15px;
+    margin: 0px auto 12px;
     }
 }
