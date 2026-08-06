@@ -1,9 +1,20 @@
 .main-inner {
-  width: calc(100% - 400px);
+  width: calc(100% - 400px) !important;
   margin-right: 6rem;
 }
-.header {
-  margin-left: 4.1rem;
+
+.column {
+    margin-left: 3.1rem !important;
+}
+
+@media (max-width: 991px) {
+    .column {
+        margin-left: 0 !important;
+    }
+    .main-inner {
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
 }
 
 
