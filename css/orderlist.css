@@ -87,8 +87,9 @@ h3 {
 }
 
 .post-body .fancybox+figcaption, .post-body .image-caption, .post-body img+figcaption {
-    margin: -15px auto 12px;
-    color: #686b68;
+    margin: -12px auto 12px !important;
+    font-size: 0.8em !important;
+    color: #515551; 
 }
 
 .vl {
