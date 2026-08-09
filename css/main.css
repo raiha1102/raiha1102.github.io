@@ -1,5 +1,5 @@
 :root {
-  --body-bg-color: #a7babe;
+  --body-bg-color: url("https://bettysgraphics.neocities.org/images/backgrounds/clouds%202.jpg");
   --content-bg-color: #eeebe6;
   --card-bg-color: #f5f5f5;
   --text-color: #2e363a;
@@ -1280,7 +1280,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #fffff4;
+    background: #ffe587;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2819,10 +2819,10 @@ header.header {
 }
 .post-body h1,
 .post-body h2 {
-  border-bottom: 1px solid #a7babe;
+  border-bottom: 1px solid url("https://bettysgraphics.neocities.org/images/backgrounds/clouds%202.jpg");
 }
 .post-body h3 {
-  border-bottom: 1px dotted #a7babe;
+  border-bottom: 1px dotted url("https://bettysgraphics.neocities.org/images/backgrounds/clouds%202.jpg");
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .main-inner {
