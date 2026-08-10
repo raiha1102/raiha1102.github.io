@@ -1280,7 +1280,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #09c1ab;
+    background: #b9d9a2;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2851,4 +2851,14 @@ header.header {
   .comments {
     padding: 10px 12px;
   }
+}
+body {
+  cursor: default;
+}
+a:hover,
+button:hover,
+.btn:hover,
+.sidebar-nav li:hover,
+.posts-expand .post-title-link:hover {
+  cursor: url("/img/cursors/izmcursor.png"), pointer;
 }
