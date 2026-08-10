@@ -12,102 +12,115 @@
 
 
 
-/*-- THE ROAD SO FAR - TESSISAMESS - 2018 --*/
-/*-- Find more fun stuff at: tessisamess.insanejournal.com --*/
+/* GENERAL */ 
+*, *:before, *:after { box-sizing: border-box; } /* Added to ensure perfect alignment at any width */
+body{margin:0;padding:0;background:#aaa url(https://bettysgraphics.neocities.org/images/backgrounds/clouds%202.jpg)center fixed repeat;font-family:Open Sans,helvetica,arial,sans-serif;font-size:14px;color:#111;} 
+a{font-weight:bold;color:#000;text-decoration:none;-webkit-transition:all 0.5s ease-in-out;-moz-transition:all 0.5s ease-in-out;-ms-transition:all 0.5s ease-in-out;-o-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;} a:hover{opacity:0.5;} 
+h1,h2,h3,h4,h5{text-transform:uppercase;margin:0;}    
 
-/* GENERAL */
+/* HEADER */ 
+header{background:rgba(0,0,0,0.3) url(HEADERBG)center;background-size:cover;text-align:center;padding:60px 0;text-transform:uppercase;text-shadow:1px 1px 0 rgba(0,0,0,0.2);color:rgba(255,255,255,0.7)} 
+header h1{font-size:240%;} header h1 a{color:#fff;} 
+header h2{font-size:180%;letter-spacing:4px;} 
+nav{font-size:9px;letter-spacing:2px;margin-top:10px;} nav a{display:inline-block;padding:0 5px;margin:0 5px;color:#fff;}  
 
-body{margin:0;padding:0;background:#eee url(https://bettysgraphics.neocities.org/images/backgrounds/clouds%202.jpg)center fixed repeat;font-family:Open Sans,helvetica,arial,sans-serif;font-size:14px;color:#304352;}
+/* WHOLE TIMELINE */ 
+#timeline{position:relative;width:1050px;margin:0 auto;text-align:justify;}  
 
-a{font-weight:bold;color:#304352;text-decoration:none;-webkit-transition:all 0.5s ease-in-out;-moz-transition:all 0.5s ease-in-out;-ms-transition:all 0.5s ease-in-out;-o-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;}
-a:hover{opacity:0.5;}
+/* VERTICAL TRACK */ 
+#timeline:after{content:'';position:absolute;width:6px;background:rgba(0,0,0,0.2);top:0;bottom:0;left:50%;margin-left:-3px;z-index:50;}  
 
-h1,h2,h3{color:#304352;text-align:center;text-transform:uppercase;font-family:;}
+/* START & END TITLES */ 
+.time-cap{
+  margin:70px auto;
+  text-align:center;
+  min-height:35px; /* Changed to accommodate padding safely */
+  width:160px;
+  padding:5px;
+  color:#fff;
+  background:#666;
+  border-radius:10px/20px;
+  position:relative;
+  z-index:100;
+  font-size:10px;
+  letter-spacing:2px;
+  text-shadow:1px 1px 0 rgba(0,0,0,0.2);
+  
+  /* Added Flexbox to perfectly center the text vertically and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+/* EACH EVENT */ 
+.event{padding:10px 40px;position:relative;background:transparent;width:50%;} 
+.event-inner{padding:40px;background:#fff;line-height:160%;text-align:justify;box-shadow:1px 1px 2px 0 rgba(0,0,0,0.2);} 
+.event img{width:100%;}  
 
-/* PAGE CONTAINER */
+/* EXTRA CLASS TO EXPAND LONG EVENTS */ 
+.full .event-inner{max-height:350px;overflow:hidden;-webkit-transition:all 1.6s ease-in-out;-moz-transition:all 1.6s ease-in-out;-ms-transition:all 1.6s ease-in-out;-o-transition:all 1.6s ease-in-out;transition:all 1.6s ease-in-out;} 
+.full-bar{display:block;background:#fff url(https://imgur.com)center no-repeat;background-size:auto 15px;text-align:center;opacity:1!important;position:absolute;left:70px;right:70px;bottom:10px;height:40px;z-index:200;border-top:1px solid rgba(0,0,0,0.2);} 
+.full .event-inner:target{max-height:9999px;} 
+.full .event-inner:target .full-bar{display:none;}  
 
-#container{}
+/* ALT EVENT FOR FULL WIDTH PHOTOS */ 
+.alt .alt-content{background:#fff;box-shadow:1px 1px 2px 0 rgba(0,0,0,0.2);} 
+.alt .event-inner{box-shadow:none;} 
+.alt h4{margin:0;padding:0 20px 10px 20px;} 
+.alt h5{padding:20px 20px 0 20px;}  
 
+/* EACH EVENT TITLE & DATE */ 
+#timeline h4{color:#666;font-size:26px;margin-bottom:10px;} 
+#timeline h5{color:#aaa;font-size:17px;}  
 
-/* HEADER */
+/* EVENT ARROWS */ 
+.event:before{content:'';height:0;position:absolute;top:22px;width:0;z-index:1;border:medium solid #fff;} 
+.event:nth-of-type(odd){left:0;} /* Clean alignment to the left half */
+.event:nth-of-type(odd):before{right:30px;border-width:10px 0 10px 10px;border-color:transparent transparent transparent #fff;} 
+.event:nth-of-type(even){left:50%;} /* Clean alignment to the right half */
+.event:nth-of-type(even):before{left:30px;border-width:10px 10px 10px 0;border-color:transparent #fff transparent transparent;}  
 
-header{background:rgba(0,0,0,0.3) url(HEADERBG)center;background-size:cover;text-align:center;padding:60px 0;text-transform:uppercase;text-shadow:1px 1px 0 rgba(0,0,0,0.2);color:rgba(255,255,255,0.7);}
-
-header h1{font-size:240%;}
-header h1 a{color:#fff;}
-
-header h2{font-size:180%;letter-spacing:4px;}
-
-nav{font-size:9px;letter-spacing:2px;margin-top:10px;}
-nav a{display:inline-block;padding:0 5px;margin:0 5px;color:#fff;}
-
-
-/* WHOLE TIMELINE */
-
-#timeline{position:relative;width:650px;margin:0 auto;text-align:justify;}
-
-
-/* VERTICAL TRACK */
-
-#timeline:after{content:'';position:absolute;width:6px;background:rgba(0,0,0,0.2);top:0;bottom:0;left:50%;margin-left:-3px;z-index:50;}
-
-
-/* START & END TITLES */
-
-.time-cap{margin:70px auto;text-align:center;height:25px;line-height:25px;width:160px;padding:5px;color:#fff;background:#c76000;border-radius:10px/20px;position:relative;z-index:100;font-size:10px;letter-spacing:2px;text-shadow:1px 1px 0 rgba(0,0,0,0.2);}
-
-
-/* EACH EVENT */
-
-.event{padding:10px 40px;position:relative;background:transparent;width:50%;}
-.event-inner{padding:30px;background:#fff;line-height:160%;text-align:justify;box-shadow:1px 1px 2px 0 rgba(0,0,0,0.2);}
-.event img{width:100%;}
-
-
-/* EXTRA CLASS TO EXPAND LONG EVENTS */
-
-.full .event-inner{max-height:250px;overflow:hidden;-webkit-transition:all 1.6s ease-in-out;-moz-transition:all 1.6s ease-in-out;-ms-transition:all 1.6s ease-in-out;-o-transition:all 1.6s ease-in-out;transition:all 1.6s ease-in-out;}
-.full-bar{display:block;background:#fff url(https://i.imgur.com/flDnIDk.png)center no-repeat;background-size:auto 15px;text-align:center;opacity:1!important;position:absolute;left:70px;right:70px;bottom:10px;height:40px;z-index:200;border-top:1px solid rgba(0,0,0,0.2);}
-.full .event-inner:target{max-height:9999px;}
-.full .event-inner:target .full-bar{display:none;}
-
-
-/* ALT EVENT FOR FULL WIDTH PHOTOS */
-
-.alt .alt-content{background:#fff;box-shadow:1px 1px 2px 0 rgba(0,0,0,0.2);}
-.alt .event-inner{box-shadow:none;}
-.alt h4{margin:0;padding:0 20px 10px 20px;}
-.alt h5{padding:20px 20px 0 20px;}
-
-
-/* EACH EVENT TITLE & DATE */
-
-#timeline h4{color:#666;font-size:22px;margin-bottom:10px;}
-#timeline h5{color:#aaa;font-size:15px;}
-
-
-/* EVENT ARROWS */
-
-.event:before{content:'';height:0;position:absolute;top:22px;width:0;z-index:1;border:medium solid #fff;}
-.event:nth-of-type(odd){left:-12.2%;}
-.event:nth-of-type(odd):before{right:30px;border-width:10px 0 10px 10px;border-color:transparent transparent transparent #fff;}
-.event:nth-of-type(even){left:50%;}
-.event:nth-of-type(even):before{left:30px;border-width:10px 10px 10px 0;border-color:transparent #fff transparent transparent;}
-
-
-/* EVENT TRACK MARKERS */
-
-.event:after{content:'';position:absolute;width:22px;height:22px;background:#666;top:22px;border-radius:50%;z-index:60;-webkit-clip-path:polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);clip-path:polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);}
-.event:nth-of-type(even):after{left:-10.5px;}
-.event:nth-of-type(odd):after{right:-10.5px;}
-
+/* EVENT TRACK MARKERS */ 
+.event:after{content:'';position:absolute;width:22px;height:22px;background:#666;top:22px;border-radius:50%;z-index:60;-webkit-clip-path:polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);clip-path:polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);} 
+.event:nth-of-type(even):after{left:-11px;} /* Centered perfectly on the 6px track line */
+.event:nth-of-type(odd):after{right:-11px;} /* Centered perfectly on the 6px track line */
 
 /* CREDIT - LEAVE THIS */
+#credit{
+  position:fixed;
+  right:-74px; /* Adjusted to show exactly the icon/span part while hiding the text */
+  width:102px;
+  bottom:15px;
+  background:#fff;
+  border:1px solid rgba(0,0,0,0.1);
+  padding:5px;
+  box-shadow:1px 1px 3px 0 rgba(0,0,0,0.2);
+  font-weight:normal;
+  font-size:10px;
+  letter-spacing:1px;
+  height:28px; /* Changed from 16px to fit the 16px span text plus padding smoothly */
+  display: flex;
+  align-items: center;
+  z-index: 9999; /* Ensures it stays visible on top of the wider layout layers */
+  -webkit-transition:all 0.5s ease-in-out;
+  -moz-transition:all 0.5s ease-in-out;
+  -ms-transition:all 0.5s ease-in-out;
+  -o-transition:all 0.5s ease-in-out;
+  transition:all 0.5s ease-in-out;
+}
+#credit:hover{
+  right:0; /* Flushes completely flat against the right edge of the screen */
+  opacity:1;
+}
+#credit span{
+  font-size:16px;
+  font-weight:bold;
+  margin-right:8px;
+  line-height: 1;
+}
 
-#credit{position:fixed;right:-83px;width:102px;bottom:15px;background:#fff;border:1px solid rgba(0,0,0,0.1);padding:5px;box-shadow:1px 1px 3px 0 rgba(0,0,0,0.2);font-weight:normal;font-size:10px;letter-spacing:1px;line-height:16px;height:16px;}
-#credit:hover{right:-1px;opacity:1;}
-#credit span{font-size:16px;font-weight:bold;display:block;float:left;padding:0 5px;margin-right:1px;}
+
+
 
 </style>
 
@@ -126,9 +139,12 @@ nav a{display:inline-block;padding:0 5px;margin:0 5px;color:#fff;}
 	<h1><a href="">【おれとセナ】/【れおくんと俺】 </a></h1>
 	<h2>EVENTS TIMELINE</h2>
 
-<pre><code>&lt;nav&gt;
-</code></pre>
-<p>translations used: maluridae, royalquintet<br><br>    <a href="https://raiha1102.github.io/timeline/">spreadsheet version (wip)</a> &#x2F;&#x2F;<br>    <a href="https://raiha1102.github.io/timeline-ref/#more">references (wip)</a> &#x2F;&#x2F;<br>    <a href="https://raiha1102.github.io/raihagumi/">raiha (wip)</a><br>	</nav></p>
+<nav>
+translations used: <a href="https://maluridae.dreamwidth.org/">shoe</a>,<a href="https://shivalries.dreamwidth.org/">royalquintet</a><br>
+    <a href="https://raiha1102.github.io/timeline/">spreadsheet version (wip)</a> //
+    <a href="https://raiha1102.github.io/timeline-ref/#more">references (wip)</a> //
+    <a href="https://raiha1102.github.io/raihagumi/">raiha (wip)</a> 
+	</nav>
 </header>
 
 <div id="timeline">
@@ -137,8 +153,15 @@ nav a{display:inline-block;padding:0 5px;margin:0 5px;color:#fff;}
 
 
   <section class="event">
+  <div class="event-inner">
+  <p><i>"Especially the period from right before I entered high school… I was at the peak of my popularity—but unable to go further, I vented my frustration on my surroundings. / I didn’t have the calm to care for others; even I realize now that I was being a lame brat. But that’s okay. Shallow people who change their opinions at the flick of a switch can’t be trusted; being hated by them doesn’t hurt me."</i><br></p>
+    </div>
+  </section>
+
+
+  <section class="event">
     <div class="event-inner">
-      <h5>Yumenosaki Y1</h5>
+      <h5>First Year</h5>
       <h4>April</h4>
       ‣ izumi on hiatus from modelling work, enrolls in yumenosaki's idol course<br>
       ‣ leo, feeling unfit for regular school, also enrolls<br>
@@ -149,24 +172,30 @@ nav a{display:inline-block;padding:0 5px;margin:0 5px;color:#fff;}
 
   <section class="event">
     <div class="event-inner">
-      <i>Wahahaha! ☆ You have such a pretty face, but your singing is way outta tune! Hilarious!<br>
-      But your voice is pretty, so I'm sure you'll get better with some training! I love it! ♪</i><br><br>
-      <h5>Yumenosaki Y1</h5>
-      <h4>May-June-July</h4>
+      <i>"Wahahaha! ☆ You have such a pretty face, but your singing is way outta tune! Hilarious! / But your voice is pretty, so I'm sure you'll get better with some training! I love it! ♪"</i><br>
     </div>
   </section>
 
   <section class="event">
   <div class="event-inner">
-  <p><i>"It's that idiot's little sister / I've gone through this door many times in the past, she knows who I am."</i><br></p>
-      <h5>Summer Vacation</h5>
-     late july - end of august
+  <h5>First Year</h5>
+      <h4>May-June-July</h4>
     </div>
   </section>
 
   <section class="event">
     <div class="event-inner">
-      <h5>Yumenosaki Y1</h5>
+    <i>(I’d copy the idols on TV and sing into my chopsticks as a microphone, while Ruka-tan smiled and clapped her little hands for me. / Her smile was as beautiful as a blooming flower. I wanted to see more smiles like that.)</i><br><br>
+    <h5>First Year</h5>
+    <h4>Summer Vacation</h4>
+    <h5>late july - end of august</h5><br>
+    </div>
+  </section>
+
+
+  <section class="event">
+    <div class="event-inner">
+      <h5>First Year</h5>
       <h4>Aug-Sept-Oct-Nov-Dec</h4>
        ‣ leo and izm close enough to be visiting e/o's houses arnd this area - carries into second year before things go downhill, assumedly<br>
        ‣ leo and shu bickering abt art when leo attends
@@ -175,14 +204,16 @@ nav a{display:inline-block;padding:0 5px;margin:0 5px;color:#fff;}
 
   <section class="event">
   <div class="event-inner">
-      <h5>Winter Break</h5>
-     dec 26 to arnd jan 6-7th
+   <p><i>(It's that idiot's little sister / I've gone through this door many times in the past, she knows who I am.)</i><br></p>
+   <h5>First Year</h5>
+  <h4>Winter Break</h4>
+       <h5>dec 26 to arnd jan 6-7th</h5><br>
     </div>
   </section>
 
 <section class="event">
   <div class="event-inner">
-  <h5>Yumenosaki Y1</h5>
+  <h5>First Year</h5>
       <h4>JAN-FEB-MAR</h4>
      (entrance exam for jr high students)<br>
      chess renamed to othello during this yr
@@ -452,10 +483,11 @@ izm acting leader of knights in place of leo
 <div class="time-cap">PRESENT DAY</div>
 
 </div>
-
 </article>
 
-
+<p><div style="text-align: center;">
+    <a href="#top" class="back-to-top" style="color: #da5932; text-decoration: none;">Back to Top ↑</a>
+</div><p>
 
 <p><a id="credit" href="https://tessisamess.insanejournal.com"><span>&copy;</span> TESSISAMESS</a></p>
 </body>
