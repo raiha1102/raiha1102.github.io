@@ -1,0 +1,114 @@
+/* General body styling and layout stuff */
+body {
+	background: var(--bg);
+	margin: 0;
+	font-size: 1em; line-height: 1.5em;
+
+	/* All of this glues the footer to the bottom and the header to the top 
+	   even on a page with very little content. Flexbox is magic. */
+	display: flex; 
+	flex-direction: column; 
+	justify-content: space-between;
+	min-height: 100vh;
+}
+
+/* Header and footer get the same styling for colors and center-alignment */
+header, footer {
+	background: var(--headfoot); 
+	color: var(--headfoot-text); 
+	text-align: center;
+}
+
+/* Header styling ahoy! */
+header {
+	background-image: var(--header-img); 
+	background-size: cover; /* Image is upscaled to completely fill header */
+	min-height: 20em; 
+	padding: 1em 0;
+}
+
+/* Spacing tweaks for header h1 */
+header h1 {
+	margin-top: 2.5em; 
+	font-size: 3em;
+}
+
+/* Center-aligns text inside the header nav list */
+header :is(ul, li) {
+	text-align: center;
+}
+
+header ul {
+	display: block; /* Margin doesn't work the same on inline-block. We need block. */
+	margin: auto; /* Centers the whole list, separate from text alignment */
+	padding: 0; 
+	background: var(--nav-background);
+}
+header li {
+	display: inline-block; /* Kills the bullet points */
+	margin: 0; 
+	padding: 1em 0.5em; 
+	font-size: 1.2em;
+}
+
+/* Makes the main content look pretty, boxes it up for you */
+main {
+	max-width: var(--main-width); 
+	margin: 1em auto; padding: 0.5em 1em; 
+	border: 2px double var(--accent);
+}
+
+footer {padding: 0.2em 0.5em;}
+
+/* The boxes that "pop out" of the main content */
+aside, .popout {
+	background: var(--bg); 
+	border: 2px solid var(--accent); 
+	padding: 0.5em 1em; 
+	border-radius: 10px; 
+	margin: 0 -2em;
+}
+.popout {padding: 1.5em 1em;}
+
+/* Square bullet points! Stylish! */
+ul {list-style-type: square;}
+
+/* Stops images from getting too big for their container 
+   because yeah, they do that by default. CSS, am I right? */
+img {max-width: 100%;}
+
+/* Gives the blockquote a left border to make it look quote-y */
+blockquote {
+	border-left: 2px solid var(--accent); 
+	padding-left: 1em; 
+	margin: 0;
+}
+
+/* Just sets link colors to whatever you specified in customization.css */
+a:link:not(header a, footer a) {color: var(--link);}
+a:visited:not(header a, footer a) {color: var(--visited-link);}
+header a, footer a {color: var(--headfoot-text);}
+
+/* Mobile tweaks */
+@media only screen and (max-width: 60ch) {
+	aside, .popout {margin: 0;} /* Margin > 0 gets crowded on mobile */
+	.popout {padding: 1em;} /* We still want things to stand out, though */
+	/* Header sizing needs tweaking to not be too big */
+	header {min-height: 10em;}
+	header h1 {font-size: 2em; margin-top: 1.2em;}
+	header li {font-size: 1em;}
+}
+
+/* Skip link styling. Hidden unless focused on with a keyboard/reader */
+#skip {
+	display: block; 
+	max-height: 1px; 
+	max-width: 1px; 
+	color: transparent;
+}
+/* Put it back to normal visibility when focused on; use default styling (inherit) */
+#skip:focus, #skip:active {
+	max-height: inherit; 
+	max-width: inherit; 
+	color: inherit;
+}

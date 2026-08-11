@@ -1,0 +1,52 @@
+/* ------ COLORS ------ */
+
+/* Color setting */
+:root {
+    --bg: #eceae6;
+    --header-img: url("./images/placeholder.jpg");
+    --headfoot: #3b3934;
+    --headfoot-text: white;
+    --nav-background: rgba(0,0,0,0.6);
+    --highlight: #efe4d3;
+    --text: black;
+    --accent: #b5a080;
+    --link: #054d09;
+    --visited-link: #4b0562;
+}
+/* Dark mode  colors*/
+@media only screen and (prefers-color-scheme: dark) {
+    :root {
+    --bg: #44423f;
+    --headfoot: #302e2a;
+    --highlight: #CBBAA4;
+    --text: white;
+    --accent: #938167;
+    --highlighttext: #221607;
+    --link: #CCE3FF;
+    --visited-link: #EADBFF;
+    }
+}
+
+/* ------ FONTS ------ */
+
+body {
+    /* System font stack + dyslexia fonts
+     * and Atkinson Hyperlegible (if installed on user system) */
+    font-family: Dyslexie, OpenDyslexic, 'Atkinson Hyperlegible', Verdana, Ubuntu, roboto, noto, Arial, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, -apple-system, BlinkMacSystemFont, Sans-Serif;
+    /* Font size = user's browser font size preference (1em) */
+    font-size: 1em;
+    /* Max width of main */
+    --main-width: 70ch;
+}
+/* Heading font */
+h1, h2, h3, h4, h5, h6 {font-family: Dyslexie, OpenDyslexic, 'The Bold Font', Serif; word-spacing: 0.1em;}
+/* abril-fatface-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'The Bold Font';
+  font-style: normal;
+  font-weight: 400;
+  src: local("theboldfont.ttf"),
+  url('./fonts/theboldfont.ttf') format('truetype');
+}
+

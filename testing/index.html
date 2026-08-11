@@ -1,229 +1,86 @@
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><!DOCTYPE HTML>
-<pre><code>&lt;head&gt;
-&lt;meta charset=&quot;utf-8&quot; /&gt;
-&lt;!--
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><!DOCTYPE html>
 
-// &quot;Serendipity&quot; Neocities template created by Mochizuki Hajime.
-    // windchime.neocities.org for more and to support me!
-    
-    // windchime.neocities.org/ for free resources 
-        and further information to help to decorate your page.
-        
-// Created 12.01.2024 and last edited 12.01.2024
-    
+<html lang="en">
 
-     *  // Properties and what they mean //  *
+<!-- The "hidden" part of the page. If you're not familiar with HTML, stick to the first block for now. -->
+  <head prefix="og: http://ogp.me/ns#">
+    <title>Site Title Goes Here</title>
+    <meta name="author" content="Your name goes here">
+    <meta name="description" content="A quick summary of this page goes here.">
+    <!-- If you want a different license than CC0, then change this! -->
+    <meta name="license" content="Creative Commons No Rights Reserved (CC0)" href="https://creativecommons.org/public-domain/cc0/">
 
+ <!-- Character set, supported color schemes, and where you came from. -->
+ <meta charset="UTF-8">
+    <meta name="color-scheme" content="dark light">
+    <meta name="referrer" content="no-referrer">
 
-        // width: the width of an element.
-        // position: the positioning of the element. 
-                ==&gt; (w3schools.com/css/css_positioning.asp)
-        // border: the border around an element. 
-                ==&gt; (w3schools.com/css/css_border.asp)
-        // margin-top: the distance of an element from the top of the page.
-        // background-image: the background of an element.
-        // font-family: the font used on the page.
-                ==&gt; (https://www.w3schools.com/css/css_font.asp, custom fonts)
-        // font-size: size of the font on the page.
-        // text-decoration: the style of links / text.
-                ==&gt; (https://www.w3schools.com/cssref/pr_text_text-decoration.php)
-        // color: text color.
-        // height: the height of an element. 
-        // margin: the space around an element. 
-                ==&gt; 0 (top) 0 (right) 0 (bottom) 0 (left)
-        // text-align: specifies where the text is centered. 
-                ==&gt; left, center, right. Remove and text will justify.
-        // background: the background color of an element. 
-                ==&gt; Can specificy background-image or background-color
-        // padding: the space inside the element.     
-        // object-fit: how an element is resized in regards to its container
-                ==&gt; (https://www.w3schools.com/css/css3_object-fit.asp)
-        //    
+ <!-- Site security measures; read about Content Security Policy before changing.
+    I've allowed inline CSS but locked down most other things. -->
+ <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="form-action 'self'">
+    <meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="object-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="style-src 'self' 'unsafe-inline'">
+    <meta http-equiv="Content-Security-Policy" content="font-src 'self'">
 
+ <!-- Makes mobile cooperate -->
+<meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0;  user-scalable=0;" name="viewport">
 
---&gt; 
-&lt;link rel=&quot;shortcut icon&quot; href=&quot;https://64.media.tumblr.com/6cd384113306083a93414045783c891d/ba5effec99382867-22/s250x400/116477bf39060abe1494dda8bab5458616247beb.png&quot;&gt;
+ <!-- Upload a .ico file named favicon.ico to get a little icon for your site! -->
+ <link rel="icon" href="/favicon.ico"  type="image/icon type">
 
-&lt;title&gt;Serendipity Template&lt;/title&gt;
+ <!-- Upload a png called preview.png to get an embed image for your site! -->
+ <meta property="og:image" content="/preview.png">
 
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-&lt;script src=&quot;//code.jquery.com/jquery-1.12.4.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;//code.jquery.com/ui/1.12.1/jquery-ui.js&quot;&gt;&lt;/script&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css&quot;&gt; 
-</code></pre>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-<pre><code>&lt;style type=&quot;text/css&quot;&gt;
+ <!-- The stylesheets. Make sure you link both or the colors will break. -->
+ <link href="/css/customization1.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/stylesheet1.css" rel="stylesheet" type="text/css" media="all">
+  </head>
 
-/******************************
+  <!-- Your actual site contents will be below this line. -->
+  <body>
+    <header>
+    <!-- Skip link saves screen readers and keyboard users some pain -->
+    <a href="#main" id="skip">Skip to main content</a>
+      <h1>Site Name</h1>  <!-- Your site's title. -->
+      <nav aria-label="Site navigation">  <!-- Header navigation; add or remove <li></li> as needed to add/remove links. -->
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/articles/article-directory.html">Articles</a></li>
+          <li><a href="/articles/article-directory.html">Links</a></li>
+        </ul>
+      </nav>
+    </header>
 
-          Essentials
+<!-- Your writing goes here! -->
+ <main id="main">
+<article>
+ <h2>Page Name</h2>
 
-******************************/
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed. Cum sociis natoque penatibus et magnis. Sit amet tellus cras adipiscing enim eu turpis egestas. Et ligula ullamcorper malesuada proin libero nunc. Maecenas accumsan lacus vel facilisis volutpat est velit. Eget velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Sapien eget mi proin sed libero. In massa tempor nec feugiat nisl pretium fusce. In mollis nunc sed id. Tellus cras adipiscing enim eu turpis. Tristique senectus et netus et malesuada fames ac. Eget egestas purus viverra accumsan in. At urna condimentum mattis pellentesque id nibh tortor id. Malesuada bibendum arcu vitae elementum. Massa tempor nec feugiat nisl pretium fusce id velit. Mauris cursus mattis molestie a iaculis at.</p>
 
-body{
-    font-family:ms gothic;
-    color:black;
-    font-size:16px;
-    background-image:url(&#39;https://64.media.tumblr.com/9c6669eba2a2baa025a9e87046d2c06f/tumblr_nk03vgtl9l1u289dqo3_250.png&#39;);
-}
+<p>Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Aliquet lectus proin nibh nisl condimentum id venenatis a condimentum. Vitae elementum curabitur vitae nunc sed velit dignissim sodales. Ipsum nunc aliquet bibendum enim facilisis gravida neque. Neque ornare aenean euismod elementum nisi. Bibendum arcu vitae elementum curabitur vitae. Suspendisse interdum consectetur libero id faucibus nisl tincidunt. Fringilla ut morbi tincidunt augue interdum velit euismod in. Tempus imperdiet nulla malesuada pellentesque elit. Lectus quam id leo in vitae. Accumsan tortor posuere ac ut consequat semper viverra. Tristique risus nec feugiat in fermentum posuere urna nec. Quis commodo odio aenean sed adipiscing diam donec adipiscing. Eget gravida cum sociis natoque.</p>
 
-a{
-    text-decoration:none;
-}
+<aside>
+ <p>Did you know that aside elements don't show up in Firefox's Reader Mode? Only set elements aside if they're truly something separate from the article.</p>
+</aside>
 
-#container{
-    position:absolute;
-    width:700px;
-    left: 50%;
-    margin-top:5px;
-    transform: translateX(-50%);
-    padding-bottom:20px;
-} 
+<p>Lacus suspendisse faucibus interdum posuere lorem ipsum. Facilisis mauris sit amet massa. Pharetra magna ac placerat vestibulum lectus mauris. Pretium lectus quam id leo in. Sed adipiscing diam donec adipiscing tristique. Vitae proin sagittis nisl rhoncus mattis. Pellentesque habitant morbi tristique senectus. Dictumst quisque sagittis purus sit amet volutpat consequat mauris nunc. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Elementum nisi quis eleifend quam. Lectus vestibulum mattis ullamcorper velit. Feugiat sed lectus vestibulum mattis ullamcorper velit. Morbi tincidunt augue interdum velit euismod in pellentesque. Faucibus turpis in eu mi bibendum. Eros donec ac odio tempor orci dapibus ultrices in. Mauris sit amet massa vitae tortor condimentum lacinia quis. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget. Egestas quis ipsum suspendisse ultrices gravida dictum fusce. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Nunc non blandit massa enim.</p>
 
-/* . . . . . . . . . . . . . . . . */    
+ <p>Sociis natoque penatibus et magnis dis parturient. Risus viverra adipiscing at in tellus. Sed pulvinar proin gravida hendrerit lectus a. Ac turpis egestas maecenas pharetra convallis posuere morbi. Imperdiet massa tincidunt nunc pulvinar. Ipsum dolor sit amet consectetur adipiscing elit. Pulvinar mattis nunc sed blandit libero volutpat. Neque convallis a cras semper. Tristique senectus et netus et malesuada fames. Lacus luctus accumsan tortor posuere ac ut. At volutpat diam ut venenatis tellus in metus vulputate eu. Imperdiet massa tincidunt nunc pulvinar. Vel pharetra vel turpis nunc eget. Ipsum faucibus vitae aliquet nec ullamcorper sit amet. Nec ultrices dui sapien eget mi. Mauris pellentesque pulvinar pellentesque habitant morbi. Diam donec adipiscing tristique risus nec feugiat.</p>
 
-#header{
-    border:5px white ridge;
-    border-bottom:none;
-    /*background:#e1edff*/
-    border-top-left-radius:15px;
-    border-top-right-radius:15px;
-    background:white;
-    background-size: cover;
-    object-fit: fill;
-    background-size: 100%;
-    background-position: 50% 35%; 
-    /*background-image:url(&#39;https://64.media.tumblr.com/f080e7fb4bd0113838da2a32ecaa2280/7e008ed7829d371b-c9/s500x750/d0d2ad7494d334e040a4b5b97e8ec477f006ebf0.png&#39;); */
-    height:310px;
-}    
+<p>Written <time datetime="YYYY-MM-DD">0 Month YYYY</time></p>
 
-/* . . . . . . . . . . . . . . . . */        
+<p><a href="#">Back to top</a></p>
+</article>
+</main>
 
-#wrapper{
-    /*border-top:none;*/
-    border-bottom:5px white ridge;
-    border-right:5px white ridge;
-    border-top:5px white ridge;
-    border-left:5px white ridge;
-    background:white;
-    height:500px;
-    padding:10px;
-    /*original height was 690px*/
-}    
+ <footer>
+  <p>Feel free to replace this footer with whatever you'd like; attribution not necessary!</p>
+ </footer>
 
-/* . . . . . . . . . . . . . . . . */        
-
-#content{
-    height:500px;
-    
-}
-
-    /* . . . . . . . . . . . . . . . */      
-#header-links{
-    height:22px;
-    font-weight:bold;
-    font-family:times;
-    background:linear-gradient(to bottom, #e3f5ff 15%, #8ecef2);
-    color:#8bb8d2;
-    letter-spacing:.5px;
-    padding:5px;
-}
-/* . . . . . . . . . . . . . . . */      
-#header-links:hover{
-    color:{color:link button link hover};
-    background:linear-gradient(to bottom, #e3f5ff 15%, #8ecef2);
-}
-    
-
-
-{CustomCss}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;    
-    &lt;div id=&quot;container&quot;&gt;
-        &lt;div id=&quot;header&quot;&gt;
-            &lt;div style=&quot;border-radius:15px;height:310px;background-image:url(&#39;https://64.media.tumblr.com/7506818be86073524f994c0cb1dc2d5b/dfa56aa256aaeb29-00/s640x960/06f60d5426235f96fd881d75abb8187c39685efe.jpg&#39;);object-fit: fill;background-position: 90% 80%;background-size:100%;box-shadow: 0 0 10px 10px white inset;&quot;&gt;
-            
-                &lt;div style=&quot;background:white;background:linear-gradient(to top, white 15%, transparent);width:99%;position:absolute;height:310px;border-top-left-radius:30px;border-top-right-radius:30px;&quot;&gt;
-                        &lt;div style=&quot;border-radius:10px;position:absolute;margin-top:60px;background-image:url(&#39;https://64.media.tumblr.com/ce79209ab033310febc02f72c5e9f21b/tumblr_orromsPZrk1udszxdo1_1280.png&#39;);background-size: 100% 95px;background-repeat: no-repeat;background-position: center;z-index:1;margin-left:30px;&quot;&gt;
-                            &lt;div style=&quot;margin-left:40px;&quot;&gt;&lt;a data-toggle=&quot;tooltip&quot; title=&quot;Refresh?&quot; href=&quot;/&quot; style=&quot;text-shadow: 1px 1px 3px black, 0 0 1em white, 0 0 0.2em white;color:white;font-size:45px;font-family:dancing;text-decoration:none;&quot;&gt;My Site&lt;/a&gt;&lt;/div&gt;
-                        
-                            &lt;div style=&quot;margin-left:10px;margin-top:-5px;&quot;&gt;&lt;text style=&quot;text-shadow: 1px 1px 3px black, 0 0 1em white, 0 0 0.2em white;color:white;font-size:35px;&quot;&gt;By Windchime&lt;/div&gt;
-                        &lt;/div&gt;
-                        
-                    &lt;div style=&quot;position:absolute;left:375px;margin-top:10px;&quot;&gt;
-                        &lt;img src=&quot;https://64.media.tumblr.com/95e8ef21f672b6f94c534a9b3ae43f5b/tumblr_nsujya3PtV1ren6s6o1_500.png&quot; style=&quot;width:315px;&quot;&gt;
-                    &lt;/div&gt;  
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        
-        &lt;div style=&quot;border:3px white ridge;border-bottom:none;border-left:5px white ridge;border-right:5px white ridge;background:white;height:33px;&quot;&gt;
-            
-                &lt;table style=&quot;border-collapse: collapse;&quot;&gt;
-                    &lt;tbody&gt;
-                        &lt;tr style=&quot;text-align:center;&quot;&gt;
-                            &lt;td style=&quot;width:250px;padding: 0;margin: 0;border-right:3px ridge white;&quot;&gt;
-                                &lt;a href=&quot;/&quot;&gt;&lt;div id=&quot;header-links&quot;&gt;Link 1&lt;/div&gt;&lt;/a&gt;
-                            &lt;/td&gt;
-                            &lt;td style=&quot;width:250px;padding: 0;margin: 0;border-right:3px ridge white;&quot;&gt;
-                                &lt;a href=&quot;/ask&quot;&gt;&lt;div id=&quot;header-links&quot;&gt;Link 2&lt;/div&gt;&lt;/a&gt;
-                            &lt;/td&gt;
-                            &lt;td style=&quot;width:250px;padding: 0;margin: 0;border-right:3px ridge white;&quot;&gt;
-                                &lt;a href=&quot;/archive&quot;&gt;&lt;div id=&quot;header-links&quot;&gt;Link 3&lt;/div&gt;&lt;/a&gt;
-                            &lt;/td&gt;
-                            &lt;td style=&quot;width:250px;padding: 0;margin: 0;border-right:none;&quot;&gt;
-                                &lt;a href=&quot;{text:link one url}&quot;&gt;&lt;div id=&quot;header-links&quot;&gt;Link 4&lt;/div&gt;&lt;/a&gt;
-                            &lt;/td&gt;
-                        &lt;/tr&gt;
-                    &lt;/tbody&gt;
-                &lt;/table&gt;
-        &lt;/div&gt;
-        
-        &lt;div id=&quot;wrapper&quot;&gt;
-            &lt;div id=&quot;content&quot;&gt;
-                &lt;div style=&quot;border:2px white ridge;&quot;&gt;
-                    &lt;div style=&quot;background-color:#eeeeee;color:#999999;font-weight:bold;padding:5px;border:2px dotted #eeeeee;&quot;&gt;Section 1&lt;/div&gt;
-                        &lt;div style=&quot;padding:5px;text-indent: 20px&quot;&gt;
-                            &lt;table&gt;
-                                &lt;tbody&gt;
-                                    &lt;tr&gt;
-                                        &lt;td&gt;
-                                            &lt;img src=&quot;https://64.media.tumblr.com/71bacd1a92270fafbfac40baaf3628ed/tumblr_pv2f0j67xf1urtrz9o2_r1_250.png&quot; style=&quot;width:125px;&quot;&gt;
-                                        &lt;/td&gt;
-                                        &lt;td style=&quot;text-indent: 20px&quot;&gt;
-                                            This template is called Serendipity, and was created by &lt;a href=&quot;https://windchime.neocities.org/&quot;&gt;Windchime&lt;/a&gt; on 12.1.2024. The theme comes with a header, website logo and four links. It would look great for a simple website. The link area could also be edited to be a marquee instead, and contain your updates, or buttons. &lt;a href=&quot;https://github.com/francelalune/neocities_layouts/blob/main/Serendipity&quot;&gt;Installation!&lt;/a&gt;
-                                        &lt;/td&gt;
-                                    &lt;/tr&gt;
-                                &lt;/tbody&gt;
-                            &lt;/table&gt;
-                        &lt;/div&gt;
-                &lt;/div&gt;
-                
-                &lt;div style=&quot;border:2px white ridge;margin:20px 0 10px 0&quot;&gt;
-                    &lt;div style=&quot;background-color:#eeeeee;color:#999999;font-weight:bold;padding:5px;border:2px dotted #eeeeee;&quot;&gt;Section 2&lt;/div&gt;
-                        &lt;div style=&quot;padding:5px;text-indent: 20px&quot;&gt;
-                            
-                            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;     
-                            
-                            
-                        &lt;/div&gt;
-                &lt;/div&gt;
-                
-                &lt;div style=&quot;border:2px white ridge;margin:20px 0 10px 0&quot;&gt;
-                    &lt;div style=&quot;background-color:#eeeeee;color:#999999;font-weight:bold;padding:5px;border:2px dotted #eeeeee;&quot;&gt;Section 3&lt;/div&gt;
-                        &lt;div style=&quot;padding:5px;text-indent: 20px&quot;&gt;
-                            
-                            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;     
-                            
-                            
-                        &lt;/div&gt;
-                &lt;/div&gt;
-                
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;    
-    
-&lt;/body&gt;
-&lt;/html&gt;    
-</code></pre>
+  </body>
+</html>
