@@ -1,252 +1,334 @@
-<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#3B3331"><meta name="generator" content="Hexo 8.1.2">
+<title>Classless CSS with Sidebar</title> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/2apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/2favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/2favicon-16x16.png">
-  <link rel="mask-icon" href="/img/favicon/2safari-pinned-tab.svg" color="#3B3331">
-  <link rel="manifest" href="/img/favicon/2site.webmanifest">
+<script>
+    // Inline script immediately sets the theme based on localStorage or system preferences to prevent style flickering
+    try {
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    } catch (e) {
+        console.error("Storage access unavailable:", e);
+    }
+</script>
 
-<link rel="stylesheet" href="/css/adjustments.css">
+<style>
 
-<link rel="stylesheet" href="/css/main.css">
+/* edited from https://kalechips.net/projects/layouts/classless */
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Raleway:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Courier+Prime:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+/* light mode base theme colours */
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+:root {
+    --color:#212c2c;
+    --background:#e8e3d6;
+    --link:#804E00;
+    --linkhover:#3c6d70;
+    --formbg:#f4f1e9;
+    --formcolor:#212c2c;
+    --accentbg:#e0d9c6;
+    --hr: #bb9860;
+    --nav-bg-image: url('https://bettysgraphics.neocities.org/images/backgrounds/clouds%202.jpg'); 
+}
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"raiha1102.github.io","root":"/","images":"/img","scheme":"Gemini","darkmode":false,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12,"Pisces | Gemini":340},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":"flat"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeInDown","post_header":false,"post_body":false,"coll_header":false,"sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+/* dark mode colours */
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="testing">
-<meta property="og:url" content="https://raiha1102.github.io/testing/index.html">
-<meta property="og:site_name" content="-&#96;🏰´-">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2026-08-11T18:31:31.000Z">
-<meta property="article:modified_time" content="2026-08-11T18:31:31.559Z">
-<meta name="twitter:card" content="summary">
+:root[data-theme="dark"] {
+    --color:#DCD7C9;
+    --background:#2C3639;
+    --link:#9bc4c7;
+    --linkhover:#cca376;
+    --formbg:#232c2f;
 
+    --formcolor:#DCD7C9;
+    --accentbg:#232c2f;
+    --hr: #5b7e81;
+    --nav-bg-image: url('https://bettysgraphics.neocities.org/images/backgrounds/clouds%202.jpg');
+}
 
-<link rel="canonical" href="https://raiha1102.github.io/testing/">
+/* layout and reset styles */
 
+* { margin: 0; padding: 0; transition:0.5s ease; box-sizing: border-box;}
+img { margin:5px; max-width:100%; }
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":true,"permalink":"https://raiha1102.github.io/testing/index.html","path":"testing/index.html","title":"testing"}</script>
-
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>testing | -`🏰´-
-</title>
-  
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VK1H5BZV59"></script>
-  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-VK1H5BZV59","only_pageview":false,"measure_protocol_api_secret":null}</script>
-  <script src="/js/third-party/analytics/google-analytics.js" defer></script>
-
-
-
-
-
-
-
-
-  
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
-<script src="/js/utils.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.5.0/dist/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
-<script src="/js/third-party/search/local-search.js" defer></script>
-
-
-
-
-
-
-
-  
+body { 
+    color:var(--color);
+    background:var(--background);
+    font: 1rem sans-serif; 
+    letter-spacing:.35px;
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
 
 
+/* side index */
+
+aside {
+    width: 190px;
+    background-color: var(--accentbg);
+    background-image: var(--nav-bg-image);
+    background-repeat: repeat;
+    border-right: 1px solid var(--hr);
+    padding: 30px 15px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+aside h3 {
+    font: 1.3em Georgia, serif;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--hr);
+    padding-bottom: 5px;
+}
 
 
-  <script src="https://cdn.jsdelivr.net/npm/quicklink@3.0.1/dist/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":false,"delay":true,"timeout":3000,"priority":true,"ignores":null,"url":"https://raiha1102.github.io/testing/"}</script>
-  <script src="/js/third-party/quicklink.js" defer></script>
+aside nav ul {
+    list-style: none;
+}
 
-  <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
+aside nav li {
+    margin: 12px 0;
+}
+
+aside nav a {
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    padding: 4px 0;
+}
+
+/* main content */
+
+main {
+    flex: 1;
+    padding: 40px;
+
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* two-column post layout*/
+
+
+main article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 25px 0;
+}
+
+/* ---------- */
+
+a { color:var(--link); }
+a:hover { color: var(--linkhover); }
+p { margin:10px 0; line-height:1.5; }
+
+main h1 { font:2em Georgia, serif; margin:5px 0 15px 0; }
+main h2 { margin:10px 0; font:1.8em Georgia, serif; }
+
+main h3 { margin:5px 0; font:1.5em Georgia, serif; }
+main h4 { font:1em Georgia, serif; font-style:italic; margin:5px 0 20px 0; }
+
+main input, textarea, select, button { 
+    background: var(--formbg);  
+    color: var(--formcolor);
+    font: 1rem sans-serif; 
+    border: 1px solid var(--hr); 
+    padding: 5px; 
+    margin: 5px;
+    border-radius:5px;
+}
+
+main textarea { width:90%; }
+
+input[type="submit"], input[type="reset"] {
+    font-size:1rem;
+    background:var(--accentbg);
+}
+
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background:var(--hr);
+    cursor:pointer;
+}
+
+main table {
+    margin:10px auto;
+    padding:5px;
+    width:100%;
+    border-collapse:collapse;
+}
+
+main th { border-bottom:1px solid var(--hr); padding:5px; text-align:left; }
+main td { padding:3px; }
+main tr:nth-child(2n) { background:var(--accentbg); }
+
+main ul, ol { list-style-position: outside; margin: 8px 0 8px 20px; }
+main li { margin:5px 0; line-height:1.5; }
+main ul li ul, main ol li ol { margin-left:15px; }
+
+
+main blockquote {
+    padding:10px;
+    border-left:10px solid var(--hr);
+    background:var(--accentbg);
+}
+
+main blockquote cite { font-size:0.95em; position:relative; right:0; }
+main summary { cursor:pointer; margin: 5px 0; }
+
+main details {
+    padding:10px;
+    background:var(--accentbg);
+    margin:5px 0;
+    border-radius:5px;
+}
+
+main hr { border:0.5px solid var(--hr); margin:20px auto; }
+
+main pre {
+
+    padding:10px;
+    background:var(--accentbg);
+    margin:10px auto;
+    border-radius:5px;
+    overflow:auto;
+}
+
+main footer {
+    text-align:center;
+    border-top: 0.5px solid var(--hr);
+    margin-top:20px;
+    padding:10px;
+}
+
+/* smaller screen */
+
+@media (max-width: 768px) {
+    body { flex-direction: column; }
+    aside {
+        width: 100%;
+
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid var(--hr);
+        padding: 20px;
+    }
+    main { padding: 20px; }
+    main article { grid-template-columns: 1fr; gap: 15px; }
+}
+
+/* dark mode img transparency */
+
+:root[data-theme="dark"] main img { opacity:0.6; }
+:root[data-theme="dark"] main img:hover,
+:root[data-theme="dark"] main a img:hover { opacity:1; }
+</style>
+
 </head>
+<body>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="headband"></div>
+<aside>
 
-  <main class="main">
-    <div class="column">
-      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-    </div>
-  </div>
+ <button id="theme-toggle" onclick="toggleTheme()" style="width: 100%; margin-bottom: 20px; cursor: pointer; font-weight: bold; padding: 8px 5px;">
+        Light/Dark
+    </button>
 
-  <div class="site-meta">
+<h3>Index</h3>
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#two-column-post">Multi-column Layout</a></li>
+            <li><a href="#features">Key Features</a></li>
+        </ul>
+    </nav>
+</aside>
 
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <p class="site-title">-`🏰´-</p>
-      <i class="logo-line"></i>
-    </a>
-  </div>
+<main>
+    <section id="introduction">
+        <h1>DL Pamphlets</h1>
+        <p>Classless CSS allows you to make a nice looking page with only basic semantic HTML! It's called classless because it isn't dependent on a special HTML structure. The CSS can also just be used as a template for other grander endeavors.</p>
+    </section>
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger" aria-label="Search" role="button">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-</div>
+ <hr>
 
+ <!-- two-column post -->
 
-
-<nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fas fa-chess-knight fa-fw"></i>Home</a></li><li class="menu-item menu-item-transcripts"><a href="/transcripts" rel="section"><i class="fas fa-camera fa-fw"></i>Transcripts</a></li><li class="menu-item menu-item-timeline"><a href="/timeline" rel="section"><i class="fas fa-table-tennis fa-fw"></i>Timeline</a></li><li class="menu-item menu-item-raiha-summary"><a href="/raihagumi" rel="section"><i class="fa fa-history fa-fw"></i>Raiha Summary</a></li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
-        </a>
-      </li>
-  </ul>
-</nav>
-
-
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-      <div class="search-header">
-        <span class="search-icon">
-          <i class="fa fa-search"></i>
-        </span>
-        <div class="search-input-container">
-          <input autocomplete="off" autocapitalize="off" maxlength="80"
-                placeholder="Searching..." spellcheck="false"
-                type="search" class="search-input">
-        </div>
-        <span class="popup-btn-close" role="button">
-          <i class="fa fa-times-circle"></i>
-        </span>
-      </div>
-      <div class="search-result-container">
-        <div class="search-result-icon">
-          <i class="fa fa-spinner fa-pulse fa-5x"></i>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</header>
+  <section id="two-column-post">
+        <h2>Magazine Style Showcase</h2>
+        <h4>An exploration of multi-column grid flow in a classless ecosystem.</h4>
         
-  
-  <aside class="sidebar">
+ <article>
+            <section>
+                <h3>IZM PROFILE</h3>
+                <p>By styling the native <code>&lt;article&gt;</code> element to implement a dynamic CSS grid layout, any immediate sibling block elements inside it automatically separate into equal-width columns. This maintains structural clarity without relying on developer-defined markup wrappers.</p>
+                <p>This layout automatically collapses back down into a stack configuration on mobile viewpoints to prioritize readability and touch targets.</p>
+            </section>
+            
+  <section>
+                <h3>INDIV INTERVIEW</h3>
+                <p>Organizing copy structurally across columns naturally facilitates quick analytical comparisons. For content-heavy frameworks, long-form journals, or digital manifestos, this mimics high-end print typography conventions natively in the web browser.</p>
+                <p>The transition styles from your original framework apply smoothly across both halves of the article block context.</p>
+     </section>
+        </article>
+    </section>
 
-    <div class="sidebar-inner sidebar-overview-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
+  <section id="two-column-post">
+        <h2>Magazine Style Showcase</h2>
+        <h4>An exploration of multi-column grid flow in a classless ecosystem.</h4>
+        
+ <article>
+            <section>
+                <h3>Left Column Dispatch</h3>
+                <p>By styling the native <code>&lt;article&gt;</code> element to implement a dynamic CSS grid layout, any immediate sibling block elements inside it automatically separate into equal-width columns. This maintains structural clarity without relying on developer-defined markup wrappers.</p>
+                <p>This layout automatically collapses back down into a stack configuration on mobile viewpoints to prioritize readability and touch targets.</p>
+            </section>
+            
+  <section>
+                <h3>Right Column Insights</h3>
+                <p>Organizing copy structurally across columns naturally facilitates quick analytical comparisons. For content-heavy frameworks, long-form journals, or digital manifestos, this mimics high-end print typography conventions natively in the web browser.</p>
+                <p>The transition styles from your original framework apply smoothly across both halves of the article block context.</p>
+     </section>
+        </article>
+    </section>
 
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-        </div>
-        <!--/noindex-->
+<pre><code>&lt;hr&gt;
+</code></pre>
+ <section id="features">
+        <h2>Key Features</h2>
+        <p>This layout uses basic markup tags like <code>&lt;aside&gt;</code> and <code>&lt;main&gt;</code> to achieve layout separation smoothly.</p>
+    </section>
 
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt=""
-      src="/img/avatar/izmmms.jpg">
-  <p class="site-author-name" itemprop="name"></p>
-  <div class="site-description" itemprop="description"></div>
-</div>
+ <footer>
+        <a href="#">Back to top</a>
+    </footer>
+</main>
 
-        </div>
-      </div>
-        <div class="back-to-top animated" role="button" aria-label="Back to top">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
-        </div>
-    </div>
+<script>
+    function toggleTheme() {
+        const root = document.documentElement;
 
-    
-  </aside>
-
-
-    </div>
-
-    <div class="main-inner page posts-expand">
-
-
-    
-    
-    
-    <div class="post-block" lang="en"><header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">testing
-</h1>
-
-<div class="post-meta-container">
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css">
-      </div>
-      
-      
-      
-    </div>
-
-    
-    
-
-
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-  <div class="copyright">
-    &copy; 
-    <span itemprop="copyrightYear">2026</span>
-    <span class="with-love">
-      <i class="fas fa-asterisk"></i>
-    </span>
-    <span class="author" itemprop="copyrightHolder">Ren (watatomo)</span>
-  </div>
-
-    </div>
-  </footer>
-
-  
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-  <div class="sidebar-dimmer"></div>
-
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
+        const currentTheme = root.getAttribute('data-theme');
+        const targetedTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        root.setAttribute('data-theme', targetedTheme);
+        
+        try {
+            localStorage.setItem('theme', targetedTheme);
+        } catch (e) {
+            console.error("Failed to write to localStorage:", e);
+        }
+    }
+</script>
 
 </body>
 </html>
+
+
