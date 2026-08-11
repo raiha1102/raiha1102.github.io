@@ -1,334 +1,229 @@
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><!DOCTYPE HTML>
+<pre><code>&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot; /&gt;
+&lt;!--
 
-<html lang="en">
-<head>
-<title>Classless CSS with Sidebar</title> 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
-
-<script>
-    // Inline script immediately sets the theme based on localStorage or system preferences to prevent style flickering
-    try {
-        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', savedTheme);
-    } catch (e) {
-        console.error("Storage access unavailable:", e);
-    }
-</script>
-
-<style>
-
-/* edited from https://kalechips.net/projects/layouts/classless */
-
-/* light mode base theme colours */
-
-:root {
-    --color:#212c2c;
-    --background:#e8e3d6;
-    --link:#804E00;
-    --linkhover:#3c6d70;
-    --formbg:#f4f1e9;
-    --formcolor:#212c2c;
-    --accentbg:#e0d9c6;
-    --hr: #bb9860;
-    --nav-bg-image: url('https://bettysgraphics.neocities.org/images/backgrounds/clouds%202.jpg'); 
-}
-
-/* dark mode colours */
-
-:root[data-theme="dark"] {
-    --color:#DCD7C9;
-    --background:#2C3639;
-    --link:#9bc4c7;
-    --linkhover:#cca376;
-    --formbg:#232c2f;
-
-    --formcolor:#DCD7C9;
-    --accentbg:#232c2f;
-    --hr: #5b7e81;
-    --nav-bg-image: url('https://bettysgraphics.neocities.org/images/backgrounds/clouds%202.jpg');
-}
-
-/* layout and reset styles */
-
-* { margin: 0; padding: 0; transition:0.5s ease; box-sizing: border-box;}
-img { margin:5px; max-width:100%; }
-
-body { 
-    color:var(--color);
-    background:var(--background);
-    font: 1rem sans-serif; 
-    letter-spacing:.35px;
-    display: flex;
-    flex-direction: row;
-    min-height: 100vh;
-}
-
-
-/* side index */
-
-aside {
-    width: 190px;
-    background-color: var(--accentbg);
-    background-image: var(--nav-bg-image);
-    background-repeat: repeat;
-    border-right: 1px solid var(--hr);
-    padding: 30px 15px;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow-y: auto;
-}
-
-aside h3 {
-    font: 1.3em Georgia, serif;
-    margin-bottom: 15px;
-    border-bottom: 1px solid var(--hr);
-    padding-bottom: 5px;
-}
-
-
-aside nav ul {
-    list-style: none;
-}
-
-aside nav li {
-    margin: 12px 0;
-}
-
-aside nav a {
-    text-decoration: none;
-    font-weight: 500;
-    display: block;
-    padding: 4px 0;
-}
-
-/* main content */
-
-main {
-    flex: 1;
-    padding: 40px;
-
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* two-column post layout*/
-
-
-main article {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin: 25px 0;
-}
-
-/* ---------- */
-
-a { color:var(--link); }
-a:hover { color: var(--linkhover); }
-p { margin:10px 0; line-height:1.5; }
-
-main h1 { font:2em Georgia, serif; margin:5px 0 15px 0; }
-main h2 { margin:10px 0; font:1.8em Georgia, serif; }
-
-main h3 { margin:5px 0; font:1.5em Georgia, serif; }
-main h4 { font:1em Georgia, serif; font-style:italic; margin:5px 0 20px 0; }
-
-main input, textarea, select, button { 
-    background: var(--formbg);  
-    color: var(--formcolor);
-    font: 1rem sans-serif; 
-    border: 1px solid var(--hr); 
-    padding: 5px; 
-    margin: 5px;
-    border-radius:5px;
-}
-
-main textarea { width:90%; }
-
-input[type="submit"], input[type="reset"] {
-    font-size:1rem;
-    background:var(--accentbg);
-}
-
-
-input[type="submit"]:hover, input[type="reset"]:hover {
-    background:var(--hr);
-    cursor:pointer;
-}
-
-main table {
-    margin:10px auto;
-    padding:5px;
-    width:100%;
-    border-collapse:collapse;
-}
-
-main th { border-bottom:1px solid var(--hr); padding:5px; text-align:left; }
-main td { padding:3px; }
-main tr:nth-child(2n) { background:var(--accentbg); }
-
-main ul, ol { list-style-position: outside; margin: 8px 0 8px 20px; }
-main li { margin:5px 0; line-height:1.5; }
-main ul li ul, main ol li ol { margin-left:15px; }
-
-
-main blockquote {
-    padding:10px;
-    border-left:10px solid var(--hr);
-    background:var(--accentbg);
-}
-
-main blockquote cite { font-size:0.95em; position:relative; right:0; }
-main summary { cursor:pointer; margin: 5px 0; }
-
-main details {
-    padding:10px;
-    background:var(--accentbg);
-    margin:5px 0;
-    border-radius:5px;
-}
-
-main hr { border:0.5px solid var(--hr); margin:20px auto; }
-
-main pre {
-
-    padding:10px;
-    background:var(--accentbg);
-    margin:10px auto;
-    border-radius:5px;
-    overflow:auto;
-}
-
-main footer {
-    text-align:center;
-    border-top: 0.5px solid var(--hr);
-    margin-top:20px;
-    padding:10px;
-}
-
-/* smaller screen */
-
-@media (max-width: 768px) {
-    body { flex-direction: column; }
-    aside {
-        width: 100%;
-
-        height: auto;
-        position: relative;
-        border-right: none;
-        border-bottom: 1px solid var(--hr);
-        padding: 20px;
-    }
-    main { padding: 20px; }
-    main article { grid-template-columns: 1fr; gap: 15px; }
-}
-
-/* dark mode img transparency */
-
-:root[data-theme="dark"] main img { opacity:0.6; }
-:root[data-theme="dark"] main img:hover,
-:root[data-theme="dark"] main a img:hover { opacity:1; }
-</style>
-
-</head>
-<body>
-
-<aside>
-
- <button id="theme-toggle" onclick="toggleTheme()" style="width: 100%; margin-bottom: 20px; cursor: pointer; font-weight: bold; padding: 8px 5px;">
-        Light/Dark
-    </button>
-
-<h3>Index</h3>
-    <nav>
-        <ul>
-            <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#two-column-post">Multi-column Layout</a></li>
-            <li><a href="#features">Key Features</a></li>
-        </ul>
-    </nav>
-</aside>
-
-<main>
-    <section id="introduction">
-        <h1>DL Pamphlets</h1>
-        <p>Classless CSS allows you to make a nice looking page with only basic semantic HTML! It's called classless because it isn't dependent on a special HTML structure. The CSS can also just be used as a template for other grander endeavors.</p>
-    </section>
-
- <hr>
-
- <!-- two-column post -->
-
-  <section id="two-column-post">
-        <h2>Magazine Style Showcase</h2>
-        <h4>An exploration of multi-column grid flow in a classless ecosystem.</h4>
+// &quot;Serendipity&quot; Neocities template created by Mochizuki Hajime.
+    // windchime.neocities.org for more and to support me!
+    
+    // windchime.neocities.org/ for free resources 
+        and further information to help to decorate your page.
         
- <article>
-            <section>
-                <h3>IZM PROFILE</h3>
-                <p>By styling the native <code>&lt;article&gt;</code> element to implement a dynamic CSS grid layout, any immediate sibling block elements inside it automatically separate into equal-width columns. This maintains structural clarity without relying on developer-defined markup wrappers.</p>
-                <p>This layout automatically collapses back down into a stack configuration on mobile viewpoints to prioritize readability and touch targets.</p>
-            </section>
-            
-  <section>
-                <h3>INDIV INTERVIEW</h3>
-                <p>Organizing copy structurally across columns naturally facilitates quick analytical comparisons. For content-heavy frameworks, long-form journals, or digital manifestos, this mimics high-end print typography conventions natively in the web browser.</p>
-                <p>The transition styles from your original framework apply smoothly across both halves of the article block context.</p>
-     </section>
-        </article>
-    </section>
+// Created 12.01.2024 and last edited 12.01.2024
+    
 
-  <section id="two-column-post">
-        <h2>Magazine Style Showcase</h2>
-        <h4>An exploration of multi-column grid flow in a classless ecosystem.</h4>
-        
- <article>
-            <section>
-                <h3>Left Column Dispatch</h3>
-                <p>By styling the native <code>&lt;article&gt;</code> element to implement a dynamic CSS grid layout, any immediate sibling block elements inside it automatically separate into equal-width columns. This maintains structural clarity without relying on developer-defined markup wrappers.</p>
-                <p>This layout automatically collapses back down into a stack configuration on mobile viewpoints to prioritize readability and touch targets.</p>
-            </section>
-            
-  <section>
-                <h3>Right Column Insights</h3>
-                <p>Organizing copy structurally across columns naturally facilitates quick analytical comparisons. For content-heavy frameworks, long-form journals, or digital manifestos, this mimics high-end print typography conventions natively in the web browser.</p>
-                <p>The transition styles from your original framework apply smoothly across both halves of the article block context.</p>
-     </section>
-        </article>
-    </section>
+     *  // Properties and what they mean //  *
 
-<pre><code>&lt;hr&gt;
+
+        // width: the width of an element.
+        // position: the positioning of the element. 
+                ==&gt; (w3schools.com/css/css_positioning.asp)
+        // border: the border around an element. 
+                ==&gt; (w3schools.com/css/css_border.asp)
+        // margin-top: the distance of an element from the top of the page.
+        // background-image: the background of an element.
+        // font-family: the font used on the page.
+                ==&gt; (https://www.w3schools.com/css/css_font.asp, custom fonts)
+        // font-size: size of the font on the page.
+        // text-decoration: the style of links / text.
+                ==&gt; (https://www.w3schools.com/cssref/pr_text_text-decoration.php)
+        // color: text color.
+        // height: the height of an element. 
+        // margin: the space around an element. 
+                ==&gt; 0 (top) 0 (right) 0 (bottom) 0 (left)
+        // text-align: specifies where the text is centered. 
+                ==&gt; left, center, right. Remove and text will justify.
+        // background: the background color of an element. 
+                ==&gt; Can specificy background-image or background-color
+        // padding: the space inside the element.     
+        // object-fit: how an element is resized in regards to its container
+                ==&gt; (https://www.w3schools.com/css/css3_object-fit.asp)
+        //    
+
+
+--&gt; 
+&lt;link rel=&quot;shortcut icon&quot; href=&quot;https://64.media.tumblr.com/6cd384113306083a93414045783c891d/ba5effec99382867-22/s250x400/116477bf39060abe1494dda8bab5458616247beb.png&quot;&gt;
+
+&lt;title&gt;Serendipity Template&lt;/title&gt;
+
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;script src=&quot;//code.jquery.com/jquery-1.12.4.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;//code.jquery.com/ui/1.12.1/jquery-ui.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css&quot;&gt; 
 </code></pre>
- <section id="features">
-        <h2>Key Features</h2>
-        <p>This layout uses basic markup tags like <code>&lt;aside&gt;</code> and <code>&lt;main&gt;</code> to achieve layout separation smoothly.</p>
-    </section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<pre><code>&lt;style type=&quot;text/css&quot;&gt;
 
- <footer>
-        <a href="#">Back to top</a>
-    </footer>
-</main>
+/******************************
 
-<script>
-    function toggleTheme() {
-        const root = document.documentElement;
+          Essentials
 
-        const currentTheme = root.getAttribute('data-theme');
-        const targetedTheme = currentTheme === 'dark' ? 'light' : 'dark';
+******************************/
+
+body{
+    font-family:ms gothic;
+    color:black;
+    font-size:16px;
+    background-image:url(&#39;https://64.media.tumblr.com/9c6669eba2a2baa025a9e87046d2c06f/tumblr_nk03vgtl9l1u289dqo3_250.png&#39;);
+}
+
+a{
+    text-decoration:none;
+}
+
+#container{
+    position:absolute;
+    width:700px;
+    left: 50%;
+    margin-top:5px;
+    transform: translateX(-50%);
+    padding-bottom:20px;
+} 
+
+/* . . . . . . . . . . . . . . . . */    
+
+#header{
+    border:5px white ridge;
+    border-bottom:none;
+    /*background:#e1edff*/
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+    background:white;
+    background-size: cover;
+    object-fit: fill;
+    background-size: 100%;
+    background-position: 50% 35%; 
+    /*background-image:url(&#39;https://64.media.tumblr.com/f080e7fb4bd0113838da2a32ecaa2280/7e008ed7829d371b-c9/s500x750/d0d2ad7494d334e040a4b5b97e8ec477f006ebf0.png&#39;); */
+    height:310px;
+}    
+
+/* . . . . . . . . . . . . . . . . */        
+
+#wrapper{
+    /*border-top:none;*/
+    border-bottom:5px white ridge;
+    border-right:5px white ridge;
+    border-top:5px white ridge;
+    border-left:5px white ridge;
+    background:white;
+    height:500px;
+    padding:10px;
+    /*original height was 690px*/
+}    
+
+/* . . . . . . . . . . . . . . . . */        
+
+#content{
+    height:500px;
+    
+}
+
+    /* . . . . . . . . . . . . . . . */      
+#header-links{
+    height:22px;
+    font-weight:bold;
+    font-family:times;
+    background:linear-gradient(to bottom, #e3f5ff 15%, #8ecef2);
+    color:#8bb8d2;
+    letter-spacing:.5px;
+    padding:5px;
+}
+/* . . . . . . . . . . . . . . . */      
+#header-links:hover{
+    color:{color:link button link hover};
+    background:linear-gradient(to bottom, #e3f5ff 15%, #8ecef2);
+}
+    
+
+
+{CustomCss}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;    
+    &lt;div id=&quot;container&quot;&gt;
+        &lt;div id=&quot;header&quot;&gt;
+            &lt;div style=&quot;border-radius:15px;height:310px;background-image:url(&#39;https://64.media.tumblr.com/7506818be86073524f994c0cb1dc2d5b/dfa56aa256aaeb29-00/s640x960/06f60d5426235f96fd881d75abb8187c39685efe.jpg&#39;);object-fit: fill;background-position: 90% 80%;background-size:100%;box-shadow: 0 0 10px 10px white inset;&quot;&gt;
+            
+                &lt;div style=&quot;background:white;background:linear-gradient(to top, white 15%, transparent);width:99%;position:absolute;height:310px;border-top-left-radius:30px;border-top-right-radius:30px;&quot;&gt;
+                        &lt;div style=&quot;border-radius:10px;position:absolute;margin-top:60px;background-image:url(&#39;https://64.media.tumblr.com/ce79209ab033310febc02f72c5e9f21b/tumblr_orromsPZrk1udszxdo1_1280.png&#39;);background-size: 100% 95px;background-repeat: no-repeat;background-position: center;z-index:1;margin-left:30px;&quot;&gt;
+                            &lt;div style=&quot;margin-left:40px;&quot;&gt;&lt;a data-toggle=&quot;tooltip&quot; title=&quot;Refresh?&quot; href=&quot;/&quot; style=&quot;text-shadow: 1px 1px 3px black, 0 0 1em white, 0 0 0.2em white;color:white;font-size:45px;font-family:dancing;text-decoration:none;&quot;&gt;My Site&lt;/a&gt;&lt;/div&gt;
+                        
+                            &lt;div style=&quot;margin-left:10px;margin-top:-5px;&quot;&gt;&lt;text style=&quot;text-shadow: 1px 1px 3px black, 0 0 1em white, 0 0 0.2em white;color:white;font-size:35px;&quot;&gt;By Windchime&lt;/div&gt;
+                        &lt;/div&gt;
+                        
+                    &lt;div style=&quot;position:absolute;left:375px;margin-top:10px;&quot;&gt;
+                        &lt;img src=&quot;https://64.media.tumblr.com/95e8ef21f672b6f94c534a9b3ae43f5b/tumblr_nsujya3PtV1ren6s6o1_500.png&quot; style=&quot;width:315px;&quot;&gt;
+                    &lt;/div&gt;  
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
         
-        root.setAttribute('data-theme', targetedTheme);
+        &lt;div style=&quot;border:3px white ridge;border-bottom:none;border-left:5px white ridge;border-right:5px white ridge;background:white;height:33px;&quot;&gt;
+            
+                &lt;table style=&quot;border-collapse: collapse;&quot;&gt;
+                    &lt;tbody&gt;
+                        &lt;tr style=&quot;text-align:center;&quot;&gt;
+                            &lt;td style=&quot;width:250px;padding: 0;margin: 0;border-right:3px ridge white;&quot;&gt;
+                                &lt;a href=&quot;/&quot;&gt;&lt;div id=&quot;header-links&quot;&gt;Link 1&lt;/div&gt;&lt;/a&gt;
+                            &lt;/td&gt;
+                            &lt;td style=&quot;width:250px;padding: 0;margin: 0;border-right:3px ridge white;&quot;&gt;
+                                &lt;a href=&quot;/ask&quot;&gt;&lt;div id=&quot;header-links&quot;&gt;Link 2&lt;/div&gt;&lt;/a&gt;
+                            &lt;/td&gt;
+                            &lt;td style=&quot;width:250px;padding: 0;margin: 0;border-right:3px ridge white;&quot;&gt;
+                                &lt;a href=&quot;/archive&quot;&gt;&lt;div id=&quot;header-links&quot;&gt;Link 3&lt;/div&gt;&lt;/a&gt;
+                            &lt;/td&gt;
+                            &lt;td style=&quot;width:250px;padding: 0;margin: 0;border-right:none;&quot;&gt;
+                                &lt;a href=&quot;{text:link one url}&quot;&gt;&lt;div id=&quot;header-links&quot;&gt;Link 4&lt;/div&gt;&lt;/a&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+        &lt;/div&gt;
         
-        try {
-            localStorage.setItem('theme', targetedTheme);
-        } catch (e) {
-            console.error("Failed to write to localStorage:", e);
-        }
-    }
-</script>
-
-</body>
-</html>
-
-
+        &lt;div id=&quot;wrapper&quot;&gt;
+            &lt;div id=&quot;content&quot;&gt;
+                &lt;div style=&quot;border:2px white ridge;&quot;&gt;
+                    &lt;div style=&quot;background-color:#eeeeee;color:#999999;font-weight:bold;padding:5px;border:2px dotted #eeeeee;&quot;&gt;Section 1&lt;/div&gt;
+                        &lt;div style=&quot;padding:5px;text-indent: 20px&quot;&gt;
+                            &lt;table&gt;
+                                &lt;tbody&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;
+                                            &lt;img src=&quot;https://64.media.tumblr.com/71bacd1a92270fafbfac40baaf3628ed/tumblr_pv2f0j67xf1urtrz9o2_r1_250.png&quot; style=&quot;width:125px;&quot;&gt;
+                                        &lt;/td&gt;
+                                        &lt;td style=&quot;text-indent: 20px&quot;&gt;
+                                            This template is called Serendipity, and was created by &lt;a href=&quot;https://windchime.neocities.org/&quot;&gt;Windchime&lt;/a&gt; on 12.1.2024. The theme comes with a header, website logo and four links. It would look great for a simple website. The link area could also be edited to be a marquee instead, and contain your updates, or buttons. &lt;a href=&quot;https://github.com/francelalune/neocities_layouts/blob/main/Serendipity&quot;&gt;Installation!&lt;/a&gt;
+                                        &lt;/td&gt;
+                                    &lt;/tr&gt;
+                                &lt;/tbody&gt;
+                            &lt;/table&gt;
+                        &lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;div style=&quot;border:2px white ridge;margin:20px 0 10px 0&quot;&gt;
+                    &lt;div style=&quot;background-color:#eeeeee;color:#999999;font-weight:bold;padding:5px;border:2px dotted #eeeeee;&quot;&gt;Section 2&lt;/div&gt;
+                        &lt;div style=&quot;padding:5px;text-indent: 20px&quot;&gt;
+                            
+                            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;     
+                            
+                            
+                        &lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;div style=&quot;border:2px white ridge;margin:20px 0 10px 0&quot;&gt;
+                    &lt;div style=&quot;background-color:#eeeeee;color:#999999;font-weight:bold;padding:5px;border:2px dotted #eeeeee;&quot;&gt;Section 3&lt;/div&gt;
+                        &lt;div style=&quot;padding:5px;text-indent: 20px&quot;&gt;
+                            
+                            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;     
+                            
+                            
+                        &lt;/div&gt;
+                &lt;/div&gt;
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;    
+    
+&lt;/body&gt;
+&lt;/html&gt;    
+</code></pre>
