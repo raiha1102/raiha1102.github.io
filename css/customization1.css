@@ -3,7 +3,8 @@
 /* Color setting */
 :root {
     --bg: #eceae6;
-    --header-img: url("./images/placeholder.jpg");
+    --header-img: url('/img/bg/cloudbg.gif');
+    --header-repeat: repeat; 
     --headfoot: #3b3934;
     --headfoot-text: white;
     --nav-background: rgba(0,0,0,0.6);
@@ -47,6 +48,6 @@ h1, h2, h3, h4, h5, h6 {font-family: Dyslexie, OpenDyslexic, 'The Bold Font', Se
   font-style: normal;
   font-weight: 400;
   src: local("theboldfont.ttf"),
-  url('./fonts/theboldfont.ttf') format('truetype');
+  url('/img/fonts/theboldfont.ttf') format('truetype');
 }
 

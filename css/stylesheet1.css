@@ -21,10 +21,9 @@ header, footer {
 
 /* Header styling ahoy! */
 header {
-	background-image: var(--header-img); 
-	background-size: cover; /* Image is upscaled to completely fill header */
-	min-height: 20em; 
-	padding: 1em 0;
+  background-color: var(--bg);
+  background-image: var(--header-img);
+  background-repeat: var(--header-repeat);
 }
 
 /* Spacing tweaks for header h1 */
