@@ -37,7 +37,7 @@ body {
     /* Font size = user's browser font size preference (1em) */
     font-size: 1em;
     /* Max width of main */
-    --main-width: 70ch;
+    --main-width: 60ch;
 }
 /* Heading font */
 h1, h2, h3, h4, h5, h6 {font-family: Dyslexie, OpenDyslexic, 'The Bold Font', Serif; word-spacing: 0.1em;}
