@@ -1,21 +1,22 @@
 @charset "UTF-8";
 :root {
-  --fonts: "Courier New", monospace;
-  --base-size: 16px;
-  --background: rgba(220,220,220,1);
+  --fonts: "Inter", "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  --font-weight: 300; 
+  --base-size: 14px;
+  background: rgba(220,220,220,1) url('https://bettysgraphics.neocities.org/images/backgrounds/clouds%202.jpg') repeat;
   --background-transparent: rgba(220,220,220,0);
   --text: #000000;
-  --accent: #333333;
+  --accent: #bb641c;
   --accent-alt: #666666;
   --page-bg: #DCDCDC;
   --page-width: 600px;
   --header-height: 400px;
-  --header-bg: url(/testing/images/astronaut.png);
+  --header-bg: url();
   --header-text: #FFFFFF;
   --sidebar-width: 200px;
   --sidebar-bg: #000000;
   --sidebar-text: #DCDCDC;
-  --sidebar-dropshadow: #333333;
+  --sidebar-dropshadow: #7ca6dd;
 }
 
 * {
@@ -95,7 +96,7 @@ nav {
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 1px;
-  padding: 0 10px;
+  padding: 0 30px;
 }
 nav ul {
   list-style: none;
@@ -112,7 +113,7 @@ nav ul li:last-child:after {
 }
 
 main {
-  padding: 10px;
+  padding: 30px;
   position: relative;
 }
 
@@ -159,7 +160,7 @@ aside .profile {
 
 footer {
   text-align: center;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 #page {
