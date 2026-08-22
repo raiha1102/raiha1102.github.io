@@ -1,0 +1,355 @@
+@charset "UTF-8";
+
+/*---- NF022 -----*/
+
+* {
+	margin: 0;
+	padding: 0;
+
+}
+
+html, body {
+	scrollbar-track-color: #5D574D;
+	scrollbar-face-color: #4C473F;
+	scrollbar-shadow-color: #4C473F;
+	scrollbar-darkshadow-color: #5D574D;
+	scrollbar-highlight-color: #4C473F;
+	scrollbar-3dlight-color: #4C473F;
+	scrollbar-arrow-color: #222;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	line-height: 1.5;
+	color: #504D47;
+	font-size: 80.3%;
+font-family: Verdana, "Hiragino Kaku Gothic ProN", "Helvetica Neue", Meiryo, sans-serif;
+	background: url(others060.gif) center top fixed;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link {
+	color: #3C5381;
+}
+
+a:visited {
+	color: #3C5381;
+}
+
+a:hover {
+	color: #3C5381;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #3C5381;
+}
+
+h1, h2 {
+	color: #CCC;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 210%;
+	font-family: "Century Gothic", "Lucida Sans Unicode", Tahoma, Arial, Sans-Serif;
+}
+	h1 a:link {color: #CCC;}
+	h1 a:visited {color: #CCC;}
+
+h2 {
+	font-size: 77%;
+}
+
+h3 {
+	padding-left: 20px;
+    padding-bottom: 5px; 
+    border-bottom: 1px dashed #5D574D;
+	margin-bottom: 10px; 
+    color: #272E3D;
+    font-size: 103%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(p_shape010_001.gif) left 3px no-repeat; 
+}
+
+h4, h5, h6 {
+	font-size: 100%;
+}
+
+p {
+	margin: 0 0 1em 0;
+}
+
+br {
+	letter-spacing: normal;
+}
+
+em {
+	color: #990021;
+	font-style: normal;
+}
+
+strong {
+	font-weight: bold;
+}
+
+big {
+	font-size: 131%;
+}
+
+small {
+	font-size: 77%;
+}
+
+ins {
+	text-decoration: underline;
+}
+
+del {
+	color: #999;
+}
+
+b {
+	font-weight: bold;
+}
+
+i {
+	font-style: oblique;
+}
+
+address, cite {
+	font-style: normal;
+}
+
+code {
+	font-family: monospace;
+}
+
+table {
+	margin: 0 0 1em 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th,td {
+	padding: 2px 5px;
+	border: 1px solid #5D574D;
+}
+
+hr {
+	display: none;
+}
+	.line {
+		margin-bottom: 30px;
+	}
+
+	.clears {
+		clear: both;
+		padding: 0 0 1em 0;
+	}
+
+img, img a {
+	border: 0;
+}
+
+	.img_right {
+		float: right;
+		margin: 0 0 0 10px;
+		padding: 5px;
+		border: 1px solid #5D574D;
+		background: url(others062.gif) left top;
+	}
+
+	.img_left {
+		float: left;
+		margin: 0 10px 0 0;
+		padding: 5px;
+		border: 1px solid #5D574D;
+		background: url(others062.gif) left top;
+	}
+
+blockquote {
+	margin: 0 0 1em 30px;
+	padding: 5px 20px;
+	border: 1px solid #5D574D;
+	background: url(others062.gif) left top;
+}
+
+input, select, textarea {
+	margin: 2px 0;
+	width: 50%;
+	border: 1px solid #5D574D;
+	color: #504D47;
+	font-size: 100%;
+	font-family: Verdana, "�q���M�m�p�S Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "�l�r �o�S�V�b�N", "MS PGothic", Sans-Serif;
+	background: url(others062.gif) left top;
+}
+
+textarea {
+	width: 90%;
+}
+
+input.button {
+	width: 90px;
+	vertical-align: middle;
+}
+
+div#out {
+	margin: 30px auto 20px auto;
+	width: 610px;
+	border: 1px solid #272E3D;
+}
+
+div#header {
+	padding: 50px 30px 0 30px;
+	height: 165px;
+	background: url(others060_hf.gif) 20% 70%;
+}
+
+div#contents {
+	padding: 10px 20px;
+	background: url(others062.gif) left top;
+}
+
+div.write {
+	margin: 15px 20px;
+}
+
+div.write ul, div.write ol {
+	margin: 0 0 1em 10px;
+}
+
+div.write ul li {
+	list-style: square inside;
+}
+
+div.write ol li {
+	list-style: decimal;
+	margin: 0 0 0 20px;
+}
+
+div.write ul.parallel {
+	margin: 0;
+}
+
+ul.parallel li {
+	display: inline;
+	list-style: none;
+}
+
+ul.parallel li img {
+	margin: 0 2px 3px 0;
+}
+
+dl {
+	margin: 0 0 1em 0;
+}
+
+dd {
+	margin: 0 0 5px 15px;
+}
+
+dl.parallel dt {
+	width: 120px;
+	line-height: 1.6;
+}
+
+dl.parallel dd {
+	margin: -1.6em 0 5px 120px;
+	padding: 0 0 0 15px;
+}
+
+p.info {
+	margin: 0 0 1em 0;
+	padding: 2px 10px 0 0;
+	height: 80px;
+	overflow: auto;
+	border: 0;
+}
+
+.deco {
+	line-height: 22px;
+	background: url("line004.gif") left top;
+}
+
+img.deco {
+	padding: 5px;
+	border: 1px solid #5D574D;
+	background: url(others062.gif) left top;
+}
+
+.page_navi li {
+	list-style: none;
+	text-align: right;
+}
+
+div#menu {
+	margin: 10px 0 0 0;
+	text-align: center;
+}
+
+div#menu p {
+	margin: 0;
+	padding-top: 5px;
+	color: #999;
+}
+
+div#menu li {
+	display: inline;
+	list-style: none;
+	padding: 0 5px;
+}
+
+div#menu li a {
+	color: #CCC;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+div#menu li a:hover {
+	color:#999;
+	text-decoration: none;
+}
+
+div#footer {
+	padding: 5px 0;
+	text-align: right;
+	background: url(others060_hf.gif) 25% 70%;
+}
+
+div#footer li {
+	display: inline;
+	list-style: none;
+	padding: 0 5px;
+}
+
+div#footer li a {
+	color: #CCC;
+}
+
+#copy {
+	padding-right: 5px;
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#copy a {
+	color: #CCC;
+}
+
+#entrance {
+	margin: 50px auto 0 auto;
+	padding: 30px;
+	width: 60%;
+	background: url(others062.gif) left top;
+}
+
+#entrance a {
+	color: #3C5381;
+}
